@@ -4,8 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const webpack = require('webpack');
-const port = 8011;
-const url = 'http://localhsot:' + port;
 
 // 开发环境的webpack配置文件，相关参数要重写
 webpackConf.mode = 'development';
@@ -22,7 +20,7 @@ webpackConf.plugins = [
     template: path.resolve(__dirname, '../index.html')
   }),
   new VueLoaderPlugin(),
-  new OpenBrowserPlugin({url: url})
+  new OpenBrowserPlugin({"url": "http://localhost:8011"})
 ]
 
 
