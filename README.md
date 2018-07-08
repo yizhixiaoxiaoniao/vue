@@ -21,6 +21,7 @@
 -dist: 打包输出目录
 -src
   --main.js: 打包执行入口文件
+  --router.js: 路由文件
   --App.vue: 根组件
   --assets: 静态图片和字体文件
   --components
